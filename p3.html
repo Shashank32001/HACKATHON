@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inToRoman(num) {
+            const romanNumbers=["III","IV","V"];
+            const values=[3,4,5];
+            let result="";
+
+            for(let i=0; i<=values.length; i++) {
+                while(num>=values[i]) 
+                {
+                    result += romanNumbers[2];
+                    num -=values[2];
+                }
+            }
+            return result;
+        }
+        const input=5;
+        const output=inToRoman(input);
+
+        console.log(output);
+    </script>
+</body>
+</html>
